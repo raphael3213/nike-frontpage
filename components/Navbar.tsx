@@ -16,7 +16,7 @@ function Navbar() {
     showMenu ? setShowMenu(false) : setShowMenu(true);
   };
   return (
-    <header className=" padding-x py-8 absolute z-10 w-full ">
+    <header className=" max-lg:px-4 padding-x py-8 absolute z-10 w-full ">
       <nav className="flex justify-between items-center max-container max-lg:hidden ">
         <a href="/">
           <Image
