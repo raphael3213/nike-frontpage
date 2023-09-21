@@ -5,3 +5,4 @@ import PopularProducts from "./PopularProducts";
 import SpecialOffers from "./SpecialOffers";
 import CustomerReviews from "./CustomerReviews";
 import ShoeCard from "./ShoeCard";
+import ProductCard from "./ProductCard";
