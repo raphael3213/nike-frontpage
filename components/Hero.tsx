@@ -1,9 +1,12 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Button from "./Button";
-import { statistics } from "@/constants";
+import { shoes, statistics } from "@/constants";
 import Image from "next/image";
+import ShoeCard from "./ShoeCard";
 
 function Hero() {
+  const [bigShoe, setBigShoe] = useState(shoes[0].bigShoe.src);
   return (
     <section
       id="home"
@@ -40,12 +43,23 @@ function Hero() {
 
       <div className="relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-40 bg-primary bg-hero bg-cover bg-center">
         <Image
-          src="/big-shoe1.png"
+          src={bigShoe}
           width={610}
           height={500}
           alt="Big Shoe 1"
           className="object-contain relative z-10"
         />
+        <div className="flex sm:gap-6 gap-4 absolute -bottom-[5%] sm:left-[10%] max-sm:px-6">
+          {shoes.map((shoe) => (
+            <div key={shoe.key}>
+              <ShoeCard
+                imgURL={shoe}
+                setBigShoe={setBigShoe}
+                bigShoeImg={bigShoe}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
