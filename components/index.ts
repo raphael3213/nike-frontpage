@@ -6,3 +6,5 @@ import SpecialOffers from "./SpecialOffers";
 import CustomerReviews from "./CustomerReviews";
 import ShoeCard from "./ShoeCard";
 import ProductCard from "./ProductCard";
+import ServiceCard from "./ServiceCard";
+import CustomerCard from "./CustomerCard";

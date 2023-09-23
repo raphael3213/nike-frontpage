@@ -11,7 +11,7 @@ import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
-    <main className="relative">
+    <main className="relative  min-w-[400px]">
       <Navbar />
       <section className="xl:padding-l wide:padding-r padding-b">
         <Hero />
