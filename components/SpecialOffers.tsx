@@ -32,7 +32,7 @@ function SpecialOffers() {
 
         <div className="flex gap-3">
           <Button label="Shop Now" iconUrl="/arrow-right.svg" />
-          <Button label="Learn More" />
+          <Button label="Learn More" backgroundColorWhite={true} />
         </div>
       </div>
     </section>

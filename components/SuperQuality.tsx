@@ -4,7 +4,10 @@ import Image from "next/image";
 
 function SuperQuality() {
   return (
-    <section id="" className=" max-container grid lg:grid-cols-2 gap-14">
+    <section
+      id="about-us"
+      className=" max-container grid lg:grid-cols-2 gap-14"
+    >
       <div>
         <h1 className="font-montserrat text-4xl font-bold">
           We Provide You <span className="text-coral-red">Super Quality</span>{" "}
