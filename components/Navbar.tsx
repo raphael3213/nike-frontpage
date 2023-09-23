@@ -1,5 +1,5 @@
 "use client";
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { navLinks } from "@/constants";
 import {
@@ -12,9 +12,28 @@ import { Transition } from "@headlessui/react";
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
+  const ref = useRef(null);
+
   const handleShowMenu = () => {
     showMenu ? setShowMenu(false) : setShowMenu(true);
   };
+
+  useEffect(() => {
+    const handleOutsideClick = () => {
+      setShowMenu(false);
+    };
+    const handleClickOutside = (event: MouseEvent) => {
+      if (ref.current) {
+        handleOutsideClick && handleOutsideClick();
+      }
+    };
+
+    document.addEventListener("click", handleOutsideClick, true);
+    return () => {
+      document.removeEventListener("click", handleOutsideClick, true);
+    };
+  });
+
   return (
     <header className=" max-lg:px-4 padding-x py-8 absolute z-50 w-full ">
       <nav className="flex justify-between items-center max-container max-lg:hidden ">
